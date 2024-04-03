@@ -237,8 +237,8 @@ section {
   color: var(--color-primary);
 }
 
-.header .btn-book-a-table,
-.header .btn-book-a-table:focus {
+.header .btn-shop-now,
+.header .btn-shop-now:focus {
   font-size: 14px;
   color: #fff;
   background: var(--color-primary);
@@ -248,8 +248,8 @@ section {
   transition: 0.3s;
 }
 
-.header .btn-book-a-table:hover,
-.header .btn-book-a-table:focus:hover {
+.header .btn-shop-now:hover,
+.header .btn-shop-now:focus:hover {
   color: #fff;
   background: rgba(206, 18, 18, 0.8);
 }
@@ -871,6 +871,18 @@ section {
   color: var(--color-primary);
 }
 
+
+.btn-primary {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 36px;
+  border-radius: 50px;
+  transition: 0.5s;
+  box-shadow: 0 8px 28px rgba(206, 18, 18, 0.2);
+}
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -1123,130 +1135,92 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Book A Table Section
+# Shop Now Section
 --------------------------------------------------------------*/
-.book-a-table .reservation-img {
-  min-height: 500px;
-  background-size: cover;
-  background-position: center;
+
+/* CSS styles for the POS interface */
+.pos-container {
+  overflow: auto;
 }
 
-.book-a-table .reservation-form-bg {
-  background: rgba(55, 55, 63, 0.04);
+.cart-items {
+  margin: 0 auto;
+  max-width: 300px;
 }
 
-.book-a-table .php-email-form {
-  padding: 40px;
+.total-payment{
+  float: right;
 }
 
-@media (max-width: 575px) {
-  .book-a-table .php-email-form {
-    padding: 20px;
-  }
+.total {
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.book-a-table .php-email-form h3 {
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.payment {
+  text-align: right;
 }
 
-.book-a-table .php-email-form h4 {
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 20px 0 0 0;
+.payment p {
+  margin: 0;
+  margin-bottom: 10px;
 }
 
-.book-a-table .php-email-form p {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.book-a-table .php-email-form .error-message {
-  display: none;
+.checkout-btn{
+  float: right;
+  background-color: #007bff;
   color: #fff;
-  background: #df1529;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 15px;
 }
 
-.book-a-table .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #059652;
+.checkout-btn:hover {
+  background-color: #0056b3;
+}
+
+.payment input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+button {
+  display: block;
+}
+
+.cart-item-title{
   text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+  font-weight: bold;
+  padding-bottom: 40px;
 }
 
-.book-a-table .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
+.cart-item ol {
+  list-style-type: disclosure-closed;
+  margin-left: 0;
+  margin-bottom: 2rem;
 }
 
-.book-a-table .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #059652;
-  border-top-color: #fff;
-  animation: animate-loading 1s linear infinite;
+.cart-item li {
+  font-size: 1.1rem;
 }
 
-.book-a-table .php-email-form input,
-.book-a-table .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  border-radius: 0;
-}
-
-.book-a-table .php-email-form input:focus,
-.book-a-table .php-email-form textarea:focus {
-  border-color: var(--color-primary);
-}
-
-.book-a-table .php-email-form input {
-  padding: 12px 15px;
-}
-
-.book-a-table .php-email-form textarea {
-  padding: 12px 15px;
-}
-
-.book-a-table .php-email-form button[type=submit] {
-  background: var(--color-primary);
-  border: 0;
-  padding: 14px 60px;
+.cart-item button {
+  margin-top: 0px;
+  margin-left: 5px;
+  padding: 0px 8px;
+  border: none;
+  background-color: #007bff;
+  font-weight: bold;
   color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
+  cursor: pointer;
+  float: right;
 }
 
-.book-a-table .php-email-form button[type=submit]:hover {
-  background: #ec2727;
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+.cart-item button:hover {
+  background-color: #0056b3;
 }
 
 /*--------------------------------------------------------------
@@ -1464,7 +1438,7 @@ section {
   margin-bottom: 30px;
 }
 
-.hero .btn-book-a-table {
+.hero .btn-shop-now {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -1477,7 +1451,7 @@ section {
   box-shadow: 0 8px 28px rgba(206, 18, 18, 0.2);
 }
 
-.hero .btn-book-a-table:hover {
+.hero .btn-shop-now:hover {
   background: rgba(206, 18, 18, 0.8);
   box-shadow: 0 8px 28px rgba(206, 18, 18, 0.45);
 }
